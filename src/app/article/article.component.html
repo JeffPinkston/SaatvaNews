@@ -1,0 +1,9 @@
+<mat-card [ngStyle.gt-xs]="{'margin.px': 20}">
+	<mat-card-header>
+		<mat-card-title fxLayoutAlign="center center">{{ title }}</mat-card-title>
+	</mat-card-header>
+	<img mat-card-image [src]="urlToImage">
+	<mat-card-content >
+		<div [innerHTML]="long_description"></div>
+	</mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+
+<mat-sidenav-container>
+  	<mat-sidenav #sidenav role="navigation">
+  		<app-article-list 
+   				[articles]="articles" 
+   				(articleSelected)="selectArticle($event);sidenav.close()"
+   				fxLayoutAlign="center" 
+   				></app-article-list>
+  	</mat-sidenav>
+  	<mat-sidenav-content>
+   		<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+   		<div fxLayout>
+   			<app-article-list 
+   				[articles]="articles" 
+   				(articleSelected)="selectArticle($event)" 
+   				fxFlex="40" 
+   				fxLayoutAlign="center" 
+   				fxHide.lt-sm></app-article-list>
+  			<app-article 
+  			    *ngIf="selectedArticle"
+  				[title]="selectedArticle?.title"
+  				[urlToImage]="selectedArticle?.urlToImage"
+  				[long_description]="selectedArticle?.long_description"
+  				fxFlex="60"
+  				fxFlex.lt-sm="100"></app-article>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
+

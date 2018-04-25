@@ -1,0 +1,18 @@
+.mat-card {
+	max-width: 600px;
+}
+
+.mat-card-image {
+	max-height: 400px;
+}
+
+.mat-card-title {
+	font-family: 'Questrial', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+mat-card-content {
+	font-family: 'Pragati Narrow', sans-serif;
+	font-size: 18px;
+}

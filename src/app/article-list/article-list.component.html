@@ -1,0 +1,13 @@
+<section class="container" [ngStyle.gt-xs]="{'margin.px': 20}">
+	
+	<div class="newsItem" 
+		(click)="selectArticle(i);"  
+		*ngFor="let article of articles let i = index"
+		[attr.data-index]="i" fxLayoutAlign="center center">
+			<img class="article_image" 
+			[style.opacity]="selectedIndex == i ? 1 : 0.1" 
+			src="{{ article.urlToImage }}">
+			<span class="title">{{ article.title }}</span>
+	</div>
+	
+</section>

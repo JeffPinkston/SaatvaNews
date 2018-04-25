@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+app-article-list .container {
+	width: 240px;
+}
+
+
