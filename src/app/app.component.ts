@@ -13,6 +13,7 @@ export class AppComponent implements OnInit, OnDestroy {
   articles = [];
   selectedArticle: Article;
   articlesSubscrption: Subscription;
+  selectedIndex = 0;
 
   constructor(private newsService: NewsService) {}
 
@@ -22,15 +23,15 @@ export class AppComponent implements OnInit, OnDestroy {
         for (const article of news['articles']) {
           this.articles.push(article);
         }
-        this.selectedArticle = this.articles[0];
+        this.selectedArticle = this.articles[this.selectedIndex];
         // this.newsService.setArticle(this.selectedArticle);
       }
     );
   }
 
   selectArticle(index: number) {
-    this.selectedArticle = this.articles[index];
-    // this.newsService.setArticle(this.selectedArticle);
+    this.selectedIndex = index;
+    this.selectedArticle = this.articles[this.selectedIndex];
   }
 
   ngOnDestroy() {

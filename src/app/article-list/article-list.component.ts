@@ -9,7 +9,7 @@ import { Article } from '../article.model';
 export class ArticleListComponent {
   @Output() articleSelected = new EventEmitter<number>();
   @Input() articles = [];
-  selectedIndex = 0;
+  @Input() selectedIndex = 0;
 
   constructor() { }
 
