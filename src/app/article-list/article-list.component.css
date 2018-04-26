@@ -38,6 +38,10 @@
 	object-fit: cover;
     height: 100%;
     width: 100%;
-    opacity: 0.2;
+    opacity: 0;
+}
+
+div.selected img{
+	opacity: 1;
 }
 
